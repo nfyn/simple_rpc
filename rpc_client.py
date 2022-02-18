@@ -1,7 +1,7 @@
 # coding: utf-8
 
 import time
-from rpc.rpc_client import RpcClient
+from rpc.client import RpcClient
 
 if __name__ == '__main__':
     with RpcClient(host='localhost', port=15000) as client:
