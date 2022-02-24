@@ -3,12 +3,12 @@
 
 # 启动RPC服务
 
-## 启动服务端
+- 启动服务端
 ```python
 python rpc_server.py
 ```
 
-## 启动客户端端
+- 启动客户端端
 ```python
 python rpc_client.py
 ```
