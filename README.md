@@ -19,6 +19,20 @@ def add1(a: int, b: int, c: int = 10) -> int:
     return a + b + c
 ```
 
+## 客户端配置
+**rpc_client.py**
+```python
+import time
+from rpc.client import RpcClient
+
+if __name__ == '__main__':
+    with RpcClient(host='localhost', port=15000) as client:
+        for i in range(100):
+            res = client.add(1, 14)
+            print(res)
+            time.sleep(3)
+```
+
 # 启动RPC服务
 
 - 启动服务端
