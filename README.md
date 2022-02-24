@@ -18,6 +18,14 @@ def add(a: int, b: int, c: int = 10) -> int:
 def add1(a: int, b: int, c: int = 10) -> int:
     return a + b + c
 ```
+- 服务端端口配置
+    - **`port`**:端口
+    - **`max_workers`**:线程池最大线程数
+```python
+if __name__ == '__main__':
+    with RpcServer(port=15000, max_workers=4) as server:
+        server.serve_forever()
+```
 
 ## 客户端配置
 **rpc_client.py**
