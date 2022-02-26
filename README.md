@@ -5,7 +5,7 @@
 一个简易的RPC框架python实现，支持多线程(线程池管理)，服务端注册函数，更方便简洁
 
 # 特点
-1. 服务端注册函数，采用RpcServer.register_function装饰器进行注册，简洁方便；
+1. 服务端注册函数，采用`RpcServer.register_function`装饰器进行注册，简洁方便；
 2. 服务端采用多线程设计，可进行线程池配置；
 3. 客户端与服务端直接数据传输，进行了数据长度校验，可防止粘包问题；
 4. 客户端连接到服务端后，会自动打印服务端可调用的函数，采用的是长连接，可多次调用不同函数；
@@ -58,8 +58,10 @@ if __name__ == '__main__':
 ```python
 python rpc_server.py
 ```
+![rpc server start](https://cdn.jsdelivr.net/gh/nfyn/image_host/rpc_server_start.png)
 
 - 启动客户端端
 ```python
 python rpc_client.py
 ```
+![rpc client start](https://cdn.jsdelivr.net/gh/nfyn/image_host/rpc_client_start.png)
