@@ -1,5 +1,6 @@
+
 # simple_rpc
-一个简易的RPC框架python实现，支持多线程(线程池管理)，服务端注册函数更方便
+一个简易的RPC框架python实现，支持多线程(线程池管理)，服务端注册函数，更方便简洁
 
 # 特点
 1. 服务端注册函数，采用RpcServer.register_function装饰器进行注册，简洁方便；
