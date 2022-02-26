@@ -35,8 +35,8 @@ if __name__ == '__main__':
 
 ## 客户端配置
 **rpc_client.py**
-    - **`host`**:远程服务端ip地址
-    - **`port`**:端口
+- **`host`**:远程服务端ip地址
+- **`port`**:端口
 ```python
 import time
 from rpc.client import RpcClient
