@@ -1,6 +1,12 @@
 # simple_rpc
 一个简易的RPC框架python实现，支持多线程(线程池管理)，服务端注册函数更方便
 
+# 特点
+1. 服务端注册函数，采用RpcServer.register_function装饰器进行注册，简洁方便；
+2. 服务端采用多线程设计，可进行线程池配置；
+3. 客户端与服务端直接数据传输，进行了数据长度校验，可防止粘包问题；
+4. 客户端连接到服务端后，会自动打印服务端可调用的函数，采用的是长连接，可多次调用不同函数；
+
 # RPC服务配置
 ## 服务端配置
 - 在服务端进行注册函数 \
@@ -14,7 +20,7 @@ def add(a: int, b: int, c: int = 10) -> int:
     return a + b + c
 
 
-@RpcServer.register_function
+@RpcServer.register_function(name='add1')
 def add1(a: int, b: int, c: int = 10) -> int:
     return a + b + c
 ```
@@ -29,6 +35,8 @@ if __name__ == '__main__':
 
 ## 客户端配置
 **rpc_client.py**
+    - **`host`**:远程服务端ip地址
+    - **`port`**:端口
 ```python
 import time
 from rpc.client import RpcClient
