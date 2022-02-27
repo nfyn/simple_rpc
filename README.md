@@ -13,8 +13,8 @@
 
 # RPC服务配置
 ## 服务端配置
-- 在服务端进行注册函数 \
 **rpc_server.py**
+- 在服务端进行注册函数 
 ```python
 from rpc.server import RpcServer
 
